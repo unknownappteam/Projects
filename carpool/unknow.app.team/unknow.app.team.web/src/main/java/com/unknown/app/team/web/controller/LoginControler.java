@@ -14,9 +14,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.unknown.app.team.intr.service.ILogin;
-import com.unknown.app.team.intr.vo.IAction;
-import com.unknown.app.team.intr.vo.LoginUserVO;
+import com.unknow.app.team.delegate.service.ILogin;
+import com.unknow.app.team.delegate.vo.IAction;
+import com.unknow.app.team.delegate.vo.LoginUserVO;
+
 
 /**
  * @author KK
@@ -37,7 +38,7 @@ public class LoginControler {
 		LOGGER.info("SitePreference : " + sitePreference);
 		LOGGER.info("Device : " + device);
 		model.addAttribute("message", "Hello World!");
-		login.validate(new LoginUserVO(), IAction.VALIDATE_USER);
+		login.validate(new LoginUserVO());
 		return "helloWorld";
 	}
 	
@@ -48,7 +49,7 @@ public class LoginControler {
 		LOGGER.info("SitePreference : " + sitePreference);
 		LOGGER.info("Device : " + device);
 		model.addAttribute("message", "Hello World!");
-		login.validate(new LoginUserVO(), IAction.VALIDATE_USER);
+		login.validate(new LoginUserVO());
 		return "helloWorld";
 	}
 }

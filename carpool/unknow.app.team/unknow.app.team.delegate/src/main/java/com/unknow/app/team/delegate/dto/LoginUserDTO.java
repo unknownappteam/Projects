@@ -1,44 +1,61 @@
-/**
- * 
- */
-package com.unknow.app.team.delegate.vo;
+package com.unknow.app.team.delegate.dto;
 
 import java.io.Serializable;
+import javax.persistence.*;
 import java.util.Date;
 
-/**
- * @author KK
- *
- */
-public class LoginUserVO implements Serializable  {
 
+/**
+ * The persistent class for the t_login_user database table.
+ * 
+ */
+@Entity
+@Table(name="t_login_user")
+@NamedQuery(name="LoginUserDTO.findAll", query="SELECT l FROM LoginUserDTO l")
+public class LoginUserDTO implements Serializable {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -7786781735363532025L;
+	private static final long serialVersionUID = 5720607346508624482L;
 
+	@Id
+	@Column(name="LOGIN_ID")
 	private int loginId;
 
+	@Column(name="CAR_REGI_NUM")
 	private String carRegiNum;
 
+	@Column(name="EMAIL_CONFORM_STR")
 	private String emailConformStr;
 
+	@Column(name="HINT_PASSWORD")
 	private String hintPassword;
 
+	@Column(name="HINT_QUESTION")
 	private String hintQuestion;
 
+	@Column(name="IS_ACTIVE_USER")
 	private byte isActiveUser;
 
+	@Column(name="IS_CONNECTED")
 	private byte isConnected;
 
+	@Temporal(TemporalType.DATE)
+	@Column(name="LOGIN_CREATED_DATE")
 	private Date loginCreatedDate;
 
+	@Column(name="LOGIN_PASSWORD")
 	private String loginPassword;
 
+	@Column(name="LOGIN_USER")
 	private String loginUser;
 
+	@Column(name="USER_EMAIL_ID")
 	private String userEmailId;
+
+	public LoginUserDTO() {
+	}
 
 	public int getLoginId() {
 		return this.loginId;
@@ -127,6 +144,5 @@ public class LoginUserVO implements Serializable  {
 	public void setUserEmailId(String userEmailId) {
 		this.userEmailId = userEmailId;
 	}
-
 
 }

@@ -19,8 +19,8 @@
   <dependencies>
   
     <dependency>
-      <groupId>unknow.app.team.intr</groupId>
-      <artifactId>unknow.app.team.intr</artifactId>
+      <groupId>unknow.app.team.server</groupId>
+      <artifactId>unknow.app.team.server</artifactId>
       <version>${project.version}</version>
     </dependency>
     

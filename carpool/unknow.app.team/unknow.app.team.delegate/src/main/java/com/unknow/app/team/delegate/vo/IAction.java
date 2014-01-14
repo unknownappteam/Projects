@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.unknown.app.team.intr.vo;
+package com.unknow.app.team.delegate.vo;
 
 /**
  * @author KK

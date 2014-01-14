@@ -16,12 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
-    <dependency>
-      <groupId>unknow.app.team.delegate</groupId>
-      <artifactId>unknow.app.team.delegate</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    
+        
     	<dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
